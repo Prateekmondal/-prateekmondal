@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p{
+    color: #EEEEEE;
+}
+
+.btn{
+    background-color: #00ADB5;
+    color: #EEEEEE;
+    width: auto;
+    height: auto;
+    border-radius: 10rem;
+    font-size: 20px;
+}
+
+.btn:hover{
+    background-color: #EEEEEE;
+    color: #222831;
+    width: auto;
+    height: auto;
+    border-radius: 10rem;
+    font-size: 25px;
+}
+
+
+
