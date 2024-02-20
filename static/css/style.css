@@ -8,8 +8,24 @@ py-5 {
     padding-bottom: 5rem;
 }
 
+body{
+    width: 100%;
+}
+
 #home {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+#about{
+    min-height: 100vh;
+}
+
+#projects{
+    min-height: 100vh;
+}
+
+#contact{
+    min-height: 105vh;
 }
 
 .hero img {
@@ -26,7 +42,7 @@ p {
 .btn {
     background-color: #00ADB5;
     color: #EEEEEE;
-    width: auto;
+    width: 100%;
     height: auto;
     border-radius: 10rem;
     font-size: 20px;
@@ -35,8 +51,8 @@ p {
 .btn:hover {
     background-color: #EEEEEE;
     color: #222831;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 20%;
     border-radius: 10rem;
     font-size: 25px;
 }
@@ -45,7 +61,6 @@ p {
 .lead {
     height: 10rem;
     line-height: 2rem;
-    overflow: hidden;
     text-align: justify;
 }
 
@@ -142,7 +157,255 @@ p {
 }
 
 .card {
-    height: 80%;
+    height: 80vh;
+    width: 80%;
     background-color: #393e46;
     border-radius: 30px;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 0;
+    font: 700 3rem 'Oswald', sans-serif;
+    line-height: 1!important;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+    max-width: 90%;
+    column-gap: 2rem;
+}
+
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    flex-direction: column;
+    width: 95%;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.form-control,
+textarea {
+    max-width: 100%;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.send-button {
+    margin-top: 1rem;
+    height: 3rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.alt-send-button {
+    width: 100%;
+    height: 3rem;
+}
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+    width: 95%;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.list-item {
+    line-height: 4;
+    color: #aaa;
+}
+
+.contact-text {
+    font: 300 1.25rem 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #bbb;
+}
+
+.place {
+    margin-left: 4rem;
+}
+
+.phone {
+    margin-left: 3rem;
+}
+
+.gmail {
+    margin-left: 3rem;
+}
+
+.contact-text a {
+    color: #bbb;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social-media-list li a {
+    color: #fff;
+}
+
+.social-media-list li {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27, 27, 27);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+    background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+    opacity: 1;
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+    color: #000;
+}
+
+.copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, .6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .direct-contact-container,
+    .form-horizontal {
+        margin: 0 auto;
+    }
+
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 300px;
+    }
+
+    .social-media-list li {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+
+    .social-media-list li:after {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .direct-contact-container,
+    .form-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .form-control,
+    textarea {
+        margin: 0 auto;
+    }
+
+
+    .name,
+    .email,
+    textarea {
+        width: 280px;
+    }
+
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 280px;
+    }
+
+    .social-media-list {
+        left: 0;
+    }
+
+    .social-media-list li {
+        height: 55px;
+        width: 55px;
+        line-height: 55px;
+        font-size: 2rem;
+    }
+
+    .social-media-list li:after {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+    }
+
 }
